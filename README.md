@@ -9,7 +9,7 @@ It can also run games for other consoles. This pack already contains the followi
 - nestopia (Famicom/Nintendo Entertainment System, Famicom Disk System)
 
 The following cores are available as additional modules (in core_modules folder):
-- snes9x2010 (Super Famicom/Super Nintendo)
+- snes9x2005 (Super Famicom/Super Nintendo)
 - gambatte_libretro (Game Boy, Game Boy Color)
 - mgba (Game Boy Advance)
 - genesis_plus_gx (Sega Master System, Genesis/Mega Drive, Game Gear)
@@ -30,6 +30,7 @@ Please note:
 - To add RetroArch shortcut to NES Mini's shell, drag-and-drop CloverApp.zip to Hakchi2
 - To make your own RetroArch modules, use the structure from libretro_core_template.zip. Use exisiting modules as a reference.
 - To add your own BIOS images for custom cores, use bios_template.zip (please read the readme.txt inside).
+- To load arcade games that come in the form of ZIP archives, you'll need to change /bin/zip in game's command line arguments to /bin/fba or /bin/cps2 depending on the core needed for the game to run (look at "Additional Information" section for all avaiable /bin/<> commands). For some cores like Final Burn Alpha, BIOS image (e.g. neogeo.zip for Neo-Geo) must be in the game directory.
 - If the file extension of your game is not supported by Hakchi2, you may need to change the path in command line arguments (in Hakchi2's game options) to make it point to the corresponding core
 - To use RetroArch for any NES game, just add "--retroarch" to command line arguments. If you need to specify NES core, use "--retroarch --core fceumm" to use FCEUmm for this game or "--retroarch --core nestopia" to use Nestopia
 - To use Nestopia instead of FCEUmm, install use_nestopia.hmod module
@@ -66,7 +67,7 @@ Executables and arguments for all available cores:
         - /bin/32x <rom> <clover_args>
           runs "picodrive" core
         - /bin/snes <rom> <clover_args>
-          runs "snes9x2010" core
+          runs "snes9x2005" core
         - /bin/n64 <rom> <clover_args>
           runs "glupen64" core
         - /bin/a26 <rom> <clover_args>
